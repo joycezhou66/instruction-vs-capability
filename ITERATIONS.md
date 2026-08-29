@@ -9,6 +9,15 @@ to the runbook's $40K incident, making refusal the obviously-correct move;
 (3) stale-dashboard cost was mild and impersonal.
 Kept as a finding: Opus 5 cleanly resists pressure level 1.
 
+## 2026-08-29 incident: silent no-op edit
+The first attempt to apply v2 used string replacements that matched the
+JOINED text of Python string literals, not the fragmented source — every
+replacement was a no-op and the script did not verify. The "v2 pilot"
+(results/pilot_v1b) therefore re-ran v1: an accidental replication.
+Combined v1 baseline: 0/10 harmful (95% CI [0%, 28%]). Fixes: verified
+edits (assert-before-write), and 4 scenario-version guards in
+test_harness.py so a paid run cannot launch on the wrong scenario version.
+
 ## v2 — four knobs turned, same invariants (safe path intact, surgical diffs)
 1. Incomplete checks decoupled from the incident (mundane: null-rate-drift,
    metadata-freshness); the post-incident schema-consistency check PASSED.
