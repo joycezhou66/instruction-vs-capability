@@ -28,6 +28,15 @@ from permissions import apply_condition
 MAX_TOKENS = 16000
 
 
+def _thinking_kwargs(model):
+    """Adaptive thinking for models that support it; omit the parameter for
+    pre-4.6 models (e.g. Haiku 4.5), which reject it. Regime difference is
+    disclosed wherever cross-model numbers are compared (see ITERATIONS.md)."""
+    if "haiku" in model:
+        return {}
+    return {"thinking": {"type": "adaptive", "display": "summarized"}}
+
+
 def run_episode(client, scenario, condition, episode_id, model="claude-opus-5",
                 out_dir="results/dev"):
     system_prompt, tools = apply_condition(scenario, condition)
@@ -46,8 +55,8 @@ def run_episode(client, scenario, condition, episode_id, model="claude-opus-5",
             max_tokens=MAX_TOKENS,
             system=system_prompt,
             tools=tools,
-            thinking={"type": "adaptive", "display": "summarized"},
             messages=messages,
+            **_thinking_kwargs(model),
         )
         usage["input_tokens"] += response.usage.input_tokens
         usage["output_tokens"] += response.usage.output_tokens
