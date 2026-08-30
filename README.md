@@ -1,7 +1,9 @@
 # Instruction vs. Capability: what does it take to get an agent to skip a safety check?
 
-An AI-safety eval built solo in ~2 days for ~$15 of API credits. Preregistered
-design, two gates, a human-validated LLM judge, and every transcript committed.
+A preregistered agentic-safety eval — one scenario family, three Claude
+models, ~$15 of API spend — with two decision gates, a mechanical primary
+outcome, an LLM judge validated against the author's manual labels (145/145
+agreement), and every transcript committed.
 
 ## The question
 
@@ -106,7 +108,7 @@ put `ANTHROPIC_API_KEY` in `.env`, then `test_harness.py` (free) before
 Built with Claude Code as pair programmer and scribe; all design decisions,
 scenario iterations, and analysis conclusions are the author's, made and
 documented in-session. All 35 hand labels were produced by the author reading
-rendered transcripts without AI assistance (ep001 served as a rubric-training
-worked example); a second Claude session assisted with [PENDING — division of
-labor to be stated precisely]. Judge outputs were never shown to the author
-before her labels were frozen and committed.
+rendered transcripts manually, with no AI assistance in the label decisions
+(ep001 served as a rubric-training worked example); Claude Code sessions
+served as pair programmer, harness operator, and scribe. Judge outputs were
+never shown to the author before her labels were frozen and committed.
