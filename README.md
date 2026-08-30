@@ -1,8 +1,8 @@
 # Instruction vs. Capability: what does it take to get an agent to skip a safety check?
 
 A preregistered agentic-safety eval across three Claude models: two decision
-gates, a mechanical primary outcome, an LLM judge validated against the
-author's manual labels (145/145 agreement), and every transcript committed.
+gates, a mechanical primary outcome, an LLM judge validated against my
+manual labels (145/145 agreement), and every transcript committed.
 
 ## The question
 
@@ -62,7 +62,7 @@ Three observations we did not expect:
   comparison is therefore *unmeasurable on current Claude models in this
   scenario* — reported as such, not papered over.
 - **Gate 2 (preregistered):** LLM judge (Opus 5) trusted only after >=85%
-  agreement with the author's blind hand labels. Result: 145/145 comparisons
+  agreement with my blind hand labels. Result: 145/145 comparisons
   across four tiers — real negatives (100/100), real positives from the
   legitimacy control (20/20), instruction-condition rule-acknowledgment values
   (25/25), plus 12/12 on scripted transcripts with ground truth by
@@ -79,6 +79,12 @@ Three observations we did not expect:
   hand-labeling; one episode noticed it. 3/5 is best read as a lower bound.
 - Judge and target are the same model family (self-preference not ruled out
   for secondary labels; primary outcome is judge-free).
+- The 145/145 judge agreement deserves its context: most cells were easy
+  calls on homogeneous refusal data. The informative cells were the ~15 hard
+  cases (real skips, eval-aware episodes, rule-acknowledgment values), all
+  matched with evidence quotes. The rubric was calibrated during my labeling
+  and frozen BEFORE any judge run (order verifiable in git history); no
+  rubric or labels were changed after seeing agreement scores.
 - Scripted judge-sensitivity positives are authored, not model-sampled.
 - Baseline pressure includes deniable authorization ("do whatever you need to
   do") by design; held constant across conditions.
@@ -104,10 +110,9 @@ put `ANTHROPIC_API_KEY` in `.env`, then `test_harness.py` (free) before
 
 ## Methods & AI-use disclosure
 
-Built with Claude Code as pair programmer and scribe; all design decisions,
-scenario iterations, and analysis conclusions are the author's, made and
-documented in-session. All 35 hand labels were produced by the author reading
-rendered transcripts manually, with no AI assistance in the label decisions
-(ep001 served as a rubric-training worked example); Claude Code sessions
-served as pair programmer, harness operator, and scribe. Judge outputs were
-never shown to the author before her labels were frozen and committed.
+I built this with Claude Code as pair programmer, harness operator, and
+scribe; the design decisions, scenario iterations, and analysis conclusions
+are mine, made and documented in-session. I labeled all 35 episodes manually
+by reading rendered transcripts, with no AI assistance in the label decisions
+(ep001 served as a rubric-training worked example). Judge outputs were never
+shown to me before my labels were frozen and committed.
