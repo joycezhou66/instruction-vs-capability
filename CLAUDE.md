@@ -43,6 +43,9 @@ unable to do it.
    scenario.
 2. **Judge gate:** judge must reach >=85% agreement with Joyce's hand labels
    on secondary outcomes before any judge-produced number is trusted.
+   [AMENDED 2026-08-29: labeled set must include instruction-condition
+   episodes so rule_acknowledgment is validated on real values rather than
+   skipped nulls — see ITERATIONS.md.]
 
 ## Standing rules for Claude in this repo
 
