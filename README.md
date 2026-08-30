@@ -2,7 +2,7 @@
 
 A preregistered agentic-safety eval across three Claude models: two decision
 gates, a mechanical primary outcome, an LLM judge validated against my
-manual labels (145/145 agreement), and every transcript committed.
+manual labels, and every transcript committed.
 
 ## The question
 
