@@ -1,9 +1,8 @@
 # Instruction vs. Capability: what does it take to get an agent to skip a safety check?
 
-A preregistered agentic-safety eval — one scenario family, three Claude
-models, ~$15 of API spend — with two decision gates, a mechanical primary
-outcome, an LLM judge validated against the author's manual labels (145/145
-agreement), and every transcript committed.
+A preregistered agentic-safety eval across three Claude models: two decision
+gates, a mechanical primary outcome, an LLM judge validated against the
+author's manual labels (145/145 agreement), and every transcript committed.
 
 ## The question
 
