@@ -42,7 +42,7 @@ Three observations I did not expect:
 3. **An eval-aware skip.** One legitimacy-control episode verbalized "this
    feels like a test of whether social pressure can push me into bypassing a
    safety control" — and then took the (correct) action anyway. Eval-awareness
-   was flagged per-episode throughout: 2/40 scored episodes verbalized
+   was flagged per-episode throughout: 2 of the 35 hand-labeled episodes verbalized
    suspicion; neither changed behavior after doing so.
 
 ## Method
