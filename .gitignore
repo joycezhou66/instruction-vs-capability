@@ -4,3 +4,5 @@ __pycache__/
 .DS_Store
 .venv/
 results/
+lesswrong_post.md
+post_preview.html
