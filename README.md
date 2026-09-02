@@ -4,6 +4,8 @@ A preregistered agentic-safety eval across three Claude models: two decision
 gates, a mechanical primary outcome, an LLM judge validated against my
 manual labels, and every transcript committed.
 
+Final Report: https://drive.google.com/file/d/1N5b0qLTnGBqY7e2xnCFlLSNWraHvfOMo/view?usp=sharing
+
 ## The question
 
 When an agent is under pressure to take a harmful action, does a system-prompt
